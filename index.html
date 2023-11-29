@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule de vacance</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>CALCUL DU MILIEU DES VACANCES</h1>
+    <div class="container">
+        <section class="section1">
+            <h2>CET OUTIL CALCULERA LA <br> MOITIE DES VACANCES</h2>
+            <p>Régulièrement lors des séparations ou des jugements de divorce, les enfants sont confiés à un parent pendant une moitié des vacances, puis à l'autre parent pendant l'autre moitié. <br>
+
+                La question qui revient régulièrement : Quel est le jour des milieux des vacances scolaires ? </p>
+
+                
+                
+            <section class="sec1">
+                <h3>Date de début des vacances</h3>
+                <div>
+                    <label for="start-date"></label>
+                    <input type="date" id="start-date" name="start-date">
+                </div>
+                <div>
+                    <label for="start-time"></label>
+                    <input type="time" id="start-time" name="start-time">
+                </div>
+            </section>
+            <section class="sec2">
+                <h3>Date de la fin des vacances</h3>
+                <div>
+                    <label for="end-date"></label>
+                    <input type="date" id="end-date" name="end-date">
+                </div>
+                <div>
+                    <label for="end-time"></label>
+                    <input type="time" id="end-time" name="end-time">
+                </div>
+
+                <br>
+            </section>
+            <div class="btn">
+                <button class="btnn">Calculer</button>
+                <p id="result"></p>
+            </div>
+            <a class="link" href="indexx.html"> Calcul personalisé</a>
+
+            <br>
+
+
+            <p> Cet outil tient compte des heures d'été/hiver, des années bixesstiles, etc.... <br>
+                <br>
+    
+     
+                Souvent il est recommandé de prendre les dates des vacances de l'académie où est scolarisé l'enfant. Elles peuvent différer de celles de l'académie où vous résidez. <br>
+                
+                Si vous avez un doute, vous pouvez consulter le site officiel du Ministère de l'Education Nationale.</p>
+    
+    
+
+        </section>
+        <section class="section2">
+            <img src="fille.png" alt="image" height="750" width="700">
+        </section>
+    </div>
+    <script>
+        // cette partie récupere les éléments du formulaire
+        const startDateInput = document.getElementById('start-date');
+        const startTimeInput = document.getElementById('start-time');
+        const endDateInput = document.getElementById('end-date');
+        const endTimeInput = document.getElementById('end-time');
+        const calculateButton = document.querySelector('.btnn');
+        const resultElement = document.getElementById('result');
+
+        calculateButton.addEventListener('click', calculateHalfDuration);
+
+        function calculateHalfDuration() {
+            const startDate = new Date(startDateInput.value + 'T' + startTimeInput.value);
+            const endDate = new Date(endDateInput.value + 'T' + endTimeInput.value);
+
+            // verification de  si les dates et heures sont valides
+            if (isNaN(startDate) || isNaN(endDate)) {
+                alert('Veuillez sélectionner des dates et heures valides.');
+                return;
+            }
+
+            // Calculer la moitié de la durée en millisecondes
+            const duration = endDate - startDate;
+            const halfDuration = duration / 2;
+
+            // Convertion de  la moitié de la durée en objet Date
+            const middleDate = new Date(startDate.getTime() + halfDuration);
+
+            resultElement.textContent = 'Le milieu des vacances est le ' + middleDate.toLocaleString();
+        }
+    </script>
+<p class="der">Cet outil est un service gratuit pour les utilisateurs et les personnes concernées. Sa maintenance et sa mise à jour pourrait être financée par des bannières de publicités. Merci de votre compréhension</p>
+
+
+</body>
+</html>

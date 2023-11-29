@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant:wght@600&family=Playfair+Display&family=Zilla+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant:wght@300;600&family=Playfair+Display&family=Roboto+Serif:opsz,wght@8..144,100&family=Zilla+Slab:wght@500&display=swap');
+
+
+body {
+    background-color: #FFF5F0;
+    
+}
+
+h1{
+    font-size: 300%;
+    font-weight: 600;
+    font-family: 'Cormorant', serif;
+    text-align: center;
+    color: #d94e08;
+    
+}
+
+p{
+  font-size: 70%;
+  font-family: 'Roboto Serif', serif;
+  color: rgb(44, 44, 44);
+  margin-left: 9%;
+  margin-right: 9%;
+  line-height: 1.8;
+
+
+}
+
+h2{
+  font-size: 270%;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Cormorant', serif;
+  color: #d34b07;
+  line-height: 1;
+
+
+}
+
+.container {
+    margin-top: 2%;
+    
+    display: flex;
+}
+
+
+
+  .section1, .section2 {
+   
+  }
+  
+  
+
+
+  
+.sec2  {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 7%;
+  margin-right: 26%;
+  
+}
+
+.sec1
+
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 7%;
+        margin-right: 28%;
+        margin-top: 15%;
+      }
+
+
+  
+  /* Styles pour les inputs */
+  input[type="date"],
+  input[type="time"] {
+    font-size: 150%;
+    padding: 1em;
+    outline: none;
+    border: 2px solid rgb(205, 129, 129);
+    background-color: transparent;
+    
+    width: 100%;
+  }
+  
+  
+
+
+  /* Styles pour les sections */
+.sec1, .sec2 {
+    margin-bottom: 20px;
+  }
+  
+  /* Styles pour les titres h3 */
+  .sec1 h3, .sec2 h3 {
+    color: rgb(210, 68, 66);
+    font-size: 14px;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    font-family: 'Cormorant', serif;
+  }
+  
+  /* Styles pour les div contenant les labels et les inputs */
+  .sec1 div, .sec2 div {
+    margin-bottom: 10px;
+  }
+  
+  /* Styles pour les labels */
+  .sec1 label, .sec2 label {
+    
+      font-size: 12px;
+      margin-left: 35%;
+      color: #4c3737; /* Couleur du texte */
+      display: block; 
+  
+  
+  }
+  
+  /* Styles pour les inputs */
+  .sec1 input[type="date"],
+  .sec1 input[type="time"],
+  .sec2 input[type="date"],
+  .sec2 input[type="time"] {
+    width: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid ;
+    border-color: #d94e08;
+
+    border-radius: 2px;
+    background-color: #FFF5F0;
+    margin-left: 20%;
+  }
+  
+  /* Styles pour les inputs de type "time" */
+  .sec1 input[type="time"],
+  .sec2 input[type="time"] {
+    width: 100px;
+  }
+  
+  /* Styles pour les inputs de type "submit" */
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+
+  .btnn {
+    display: inline-block;
+    padding: 8px 60px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #c7420070;
+    border: 1px solid;
+    border-color: #d94e08;
+    color: #d94e08;
+    font-family: 'Cormorant', serif;
+
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 32%;
+    margin-top: 1%;
+  }
+  .btnn:hover {
+    background-color: #ffffff;
+  }
+  
+
+
+
+  .der{
+    font-size: 50%;
+    font-family: 'Roboto Serif', serif;
+    color: #d34b07;
+    text-align: center;
+  
+    line-height: 1.8;
+
+
+}
