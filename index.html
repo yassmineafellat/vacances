@@ -45,9 +45,7 @@
             </section>
             <div class="btn">
                 <button class="btnn">Calculer</button>
-                <p id="result"></p>
             </div>
-            <a class="link" href="indexx.html"> Calcul personalisé</a>
 
             <br>
 
@@ -65,6 +63,8 @@
         </section>
         <section class="section2">
             <img src="fille.png" alt="image" height="750" width="700">
+            <p class="result" id="result"></p>
+
         </section>
     </div>
     <script>
@@ -78,28 +78,38 @@
 
         calculateButton.addEventListener('click', calculateHalfDuration);
 
-        function calculateHalfDuration() {
-            const startDate = new Date(startDateInput.value + 'T' + startTimeInput.value);
-            const endDate = new Date(endDateInput.value + 'T' + endTimeInput.value);
+  
 
-            // verification de  si les dates et heures sont valides
-            if (isNaN(startDate) || isNaN(endDate)) {
-                alert('Veuillez sélectionner des dates et heures valides.');
-                return;
-            }
+function calculateHalfDuration() {
+    const startDate = new Date(startDateInput.value + 'T' + startTimeInput.value);
+    const endDate = new Date(endDateInput.value + 'T' + endTimeInput.value);
 
-            // Calculer la moitié de la durée en millisecondes
-            const duration = endDate - startDate;
-            const halfDuration = duration / 2;
+    // vérification de la validité des dates et heures
+    if (isNaN(startDate) || isNaN(endDate)) {
+        alert('Veuillez sélectionner des dates et heures valides.');
+        return;
+    }
 
-            // Convertion de  la moitié de la durée en objet Date
-            const middleDate = new Date(startDate.getTime() + halfDuration);
+    // Calculer la moitié de la durée en millisecondes
+    const duration = endDate - startDate;
+    const halfDuration = duration / 2;
 
-            resultElement.textContent = 'Le milieu des vacances est le ' + middleDate.toLocaleString();
-        }
+    // Convertir la moitié de la durée en objet Date
+    const middleDate = new Date(startDate.getTime() + halfDuration);
+
+    // Formater la date sans les secondes et avec seulement l'année, le mois et le jour
+    const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+    const formattedMiddleDate = middleDate.toLocaleString(undefined, options);
+
+    resultElement.textContent = 'Le milieu des vacances est le ' + formattedMiddleDate;
+}
+
+
+
     </script>
 <p class="der">Cet outil est un service gratuit pour les utilisateurs et les personnes concernées. Sa maintenance et sa mise à jour pourrait être financée par des bannières de publicités. Merci de votre compréhension</p>
 
 
 </body>
 </html>
+
