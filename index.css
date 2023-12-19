@@ -228,3 +228,44 @@ h2{
 
 
 }
+
+
+
+@media screen and (max-width: 768px) {
+  h1 {
+      font-size: 2.5rem;
+  }
+
+  p {
+      font-size: 1.2rem;
+  }
+
+  h2 {
+      font-size: 2rem;
+  }
+
+  .container {
+      flex-direction: column;
+  }
+
+  .sec1,
+  .sec2 {
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 10%;
+  }
+
+  .btnn {
+      padding: 8px 20%;
+      font-size: 1.8rem;
+      margin-left: 20%;
+      margin-top: 5%;
+  }
+
+  input[type="date"],
+  input[type="time"] {
+    font-size: 0.9rem;
+    padding: 0.6em;
+  }
+
+}
