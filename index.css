@@ -276,9 +276,9 @@ h2{
   #result {
     position: absolute;
     top: 160%;
-    left: 50%;
+    left: 57%;
     transform: translateX(-50%);
-    font-size: 150%;
+    font-size: 130%;
 }
 
 
