@@ -272,6 +272,10 @@ h2{
     padding: 0.6em;
   }
 
+.section2 img {
+    display: none;
+}
+
 
   #result {
     position: absolute;
