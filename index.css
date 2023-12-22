@@ -243,6 +243,10 @@ h2{
   h2 {
       font-size: 2rem;
   }
+   
+  #result-image {
+    display: none;
+}
 
   .container {
       flex-direction: column;
@@ -268,4 +272,22 @@ h2{
     padding: 0.6em;
   }
 
+
+  #result {
+    position: absolute;
+    top: 101%;
+    left: 40%;
+    transform: translateX(-50%);
+    font-size: 190%;
 }
+
+
+
+
+
+}
+
+
+
+
+
